@@ -11,6 +11,7 @@ var db = openDatabase({
 import HomeScreen from './src/screen/HomeScreen';
 import LoginScreen from './src/screen/LoginScreen';
 import ListaFilmesScreen from './src/screen/ListaFilmesScreen';
+import FilmeAPIScreen from './src/screen/ListaFilmesAPIScreen';
 import FilmeScreen from './src/screen/FilmeScreen';
 import SobreScreen from './src/screen/SobreScreen';
 import CameraScreen from './src/screen/CameraScreen';
@@ -78,6 +79,7 @@ const AppTab = createBottomTabNavigator(
   {
   Home: {screen: ListaFilmesScreen},   
   Filme: {screen: FilmeScreen},
+  FilmeAPI: {screen: FilmeAPIScreen},
   Sobre: {screen: SobreScreen}
   }, 
   {

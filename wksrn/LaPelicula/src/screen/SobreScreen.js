@@ -12,12 +12,12 @@ export default class SobreScreen extends Component {
         tabBarIcon: ({focused, tintColor}) => {
           if (focused) {
             return (
-              <Image source={require('../img/cadastrar_ativo.png')}
+              <Image source={require('../img/information.png')}
               style={{width: 26, height: 26}}/>
             );
           } else {
             return (
-              <Image source={require('../img/cadastrar_inativo.png')}
+              <Image source={require('../img/information.png')}
               style={{width: 26, height: 26}}/>
             );            
           }
@@ -51,11 +51,15 @@ export default class SobreScreen extends Component {
   render(){
     return (
       <View style={styles.container}>
-        <Text>Tela Sobre</Text>
+
+        <View style={styles.viewInterna}>
+           <Text style={styles.texto}>LaPelicula</Text> 
+           <Text style={styles.texto}>Você terá o total controle de todos seus filmes cadastrando-os neste programa gratuito, que é simples e leve, fácil
+            de configurar e muito útil.</Text> 
+        </View>      
+
         <LPButton titulo = "Voltar"
-        onPress={() => {this.voltar()}}/>         
-        <LPButton titulo = "Tela Principal"
-        onPress={() => {this.telaPrincipal()}}/>                         
+        onPress={() => {this.voltar()}}/>                               
       </View>
     );
   }
@@ -66,6 +70,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'white'
+  },
+
+  viewInterna: {
+    flex : 1,
+    margin: 5
+  },
+
+  texto: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#80ffdf',
+    textAlign: 'center'
   }
 });
